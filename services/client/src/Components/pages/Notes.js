@@ -25,6 +25,7 @@ import TextField from '@mui/material/TextField';
 
 import NoteCard from './component_note/NoteCard.js';
 import Update from './Update';
+import SkeletonArticle from './skeletons/SkeletonArticle.js';
 
 const axios = require('axios');
 
@@ -172,7 +173,8 @@ export default function Notes({currentUser}) {
               />
             </Grid>
           ))}
-          <Grid cointainer>{loading &&  < WindMillLoading/>}</Grid>
+          {!notes && [1,2,3,4,5].map((n) => <SkeletonArticle key={n} theme="light" />)}
+          {/* <Grid cointainer>{loading &&  < WindMillLoading/>}</Grid> */}
         </Grid>
 
 
