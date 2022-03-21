@@ -173,8 +173,7 @@ export default function Notes({currentUser}) {
               />
             </Grid>
           ))}
-          {!notes && [1,2,3,4,5].map((n) => <SkeletonArticle key={n} theme="light" />)}
-          {/* <Grid cointainer>{loading &&  < WindMillLoading/>}</Grid> */}
+          <Grid cointainer>{loading &&  < WindMillLoading/>}</Grid>
         </Grid>
 
 
